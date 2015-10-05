@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Ubermelon Order Form</title>
+    </head>
+    <body>
+        <h1>Order!</h1>
+        <table>
+            <thead>
+                <th>Melon Name</th>
+                <th>Price per lb.</th>
+            </thead>
+                <tr>
+                    <td>Watermelon</td>
+                    <td>$1.59</td>
+                </tr>
+                <tr>
+                    <td>Honeydew</td>
+                    <td>$0.99</td>
+                </tr>
+                <tr>
+                    <td>Canteloupe</td>
+                    <td>$1.29</td>
+                </tr>
+                <tr>
+                    <td>Crenshaw</td>
+                    <td>$2.19</td>
+                </tr>
+                <tr>
+                    <td>Canary</td>
+                    <td>$11.99</td>
+                </tr>
+        </table>
+
+        <p>Place your orders here!  You know you want to.</p>
+        <form> 
+            <label for="field-firstname">First Name:</label>
+            <input type="text" name="firstname" id="field-firstname"><br><br>
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lastname"><br><br>
+
+            <label for="Melontype">Melon Type:</label>
+
+            <select name="melontype">
+                <option value="Watermelon">Watermelon</option>
+                <option value="Honeydew">Honeydew</option>
+                <option value="Canteloupe">Canteloupe</option>
+                <option value="Crenshaw">Crenshaw</option>
+                <option value="canary">Canary</option>
+            </select><br><br>
+
+            <label for="text-quantity">Quantity</label>
+            <input type="text" name="quantity" id="text-quantity">
+            <br><br>
+
+            <label for="radio-deliverytime">Delivery Time:</label>
+            <input type="radio" name="time" value ="am"> AM
+            <input type="radio" name="time" value ="pm"> PM
+            <input type="radio" name="time" value ="wat"> WAT
+            <br><br>
+
+            <label for="radio-returningcustomer">Returning Customer?</label>
+            <input type="radio" name="Returning customer" value="yes">Yes
+            <input type="radio" name="Returning customer" value="no">No
+            <br><br>
+
+            <label for="checkbox-stats">For Statistical Purposes:</label>
+            <input type="checkbox" name="animals" value="Dog">Dog
+            <input type="checkbox" name="animals" value="Cat">Cat
+            <input type="checkbox" name="animals" value="Hedgehog">Hedgehog
+            <input type="checkbox" name="animals" value="Balloonicorn">Balloonicorn
+            <input type="checkbox" name="animals" value="Yak">Yak
+            <br><br>
+        </form>
+        <form action="https://ubermelon-order-form.herokuapp.com/process" method="GET">
+            <label for="submit"></label>
+            <input type="submit" value="Submit"><br><br>
+        </form>
+        <p>*Quantities are given by the flat.</p>
+    </body>
+
+</html>
